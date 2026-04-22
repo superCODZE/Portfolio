@@ -1,0 +1,33 @@
+
+nav{
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: thistle;
+  gap:750px;
+  font-family: 'orbitron', sans-serif;
+  background: rgba(26, 0, 39, 0.9);
+  
+  z-index: 100;
+
+   
+   
+   
+   
+  
+}
+
+header{
+  color: thistle;
+  font-family: 'orbitron', sans-serif;
+}
+
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  
+}
