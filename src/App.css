@@ -5,29 +5,69 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: thistle;
-  gap:750px;
+  color: rgb(255, 255, 255);
+  gap:850px;
+  font-size: 14px;
   font-family: 'orbitron', sans-serif;
-  background: rgba(26, 0, 39, 0.9);
+  background-color: #01071c;
+  opacity: 0.89;
   
   z-index: 100;
+}
 
-   
-   
-   
-   
-  
+nav a{
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: color 0.5s ;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 header{
+  
   color: thistle;
   font-family: 'orbitron', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
 }
+
+header h1{
+ 
+  margin: 10px;
+}
+
+header pre{
+
+  margin-bottom: 0;
+}
+
+header .text{
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+}
+
+
+
 
 
 .container1{
   display: flex;
   flex-direction: row;
   gap: 50px;
+  
+}
+
+
+
+nav a:hover{
+  color: rgb(0, 255, 238);
+
+  text-shadow: 0 0 10px rgb(0, 255, 238);
+  
   
 }

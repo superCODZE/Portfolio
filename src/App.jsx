@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Main from './components/main'
 import Header from './components/header'
 import NavBar from './components/navBar';
 import './App.css'
@@ -74,6 +75,7 @@ function App() {
      
      <NavBar />
      <Header />
+     <Main />
     
   
     </>
