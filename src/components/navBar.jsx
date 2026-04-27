@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 
 
 
@@ -7,18 +9,13 @@ function NavBar() {
         <>
             <nav>
                
-                <h3>. My_Portfolio</h3>
+                <h3 className="cursor-target">.My_Portfolio</h3>
 
                 <div className="container1">
-                    <a href="">
-                       About_me
-                    </a>
-                    <a href="">
-                        Projects
-                    </a>
-                    <a href="">
-                       Contact
-                    </a>
+                    <a className="cursor-target" href="">About_me</a>
+                    <a className="cursor-target" href=""> Skills</a>
+                    <a className="cursor-target" href=""> Projects</a>
+                    <a className="cursor-target" href="">Contact </a>
                    
                    
                    

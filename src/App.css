@@ -1,64 +1,77 @@
 
 nav{
+  
   position: sticky;
   top: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  gap:850px;
+  gap: 750px;
   font-size: 14px;
   font-family: 'orbitron', sans-serif;
-  background-color: #01071c;
-  opacity: 0.89;
-  
+  background-color:#01071c;
+  opacity: 0.9;
   z-index: 100;
+  border-bottom: solid #001e22;
 }
 
 nav a{
+  
+  padding-top: 10px;
   color: rgb(255, 255, 255);
-  cursor: pointer;
   transition: color 0.5s ;
   text-decoration: none;
   font-size: 15px;
+  cursor: none;
+  padding:6px;
 }
+nav h3{
+  
+  padding-top: 10px;
+  padding: 6px;
+  
+
+}
+
+
 
 header{
-  
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   color: thistle;
   font-family: 'orbitron', sans-serif;
-  text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
+  
+  
+  
   
 }
 
-header h1{
- 
-  margin: 10px;
+.contain1{
+  
+  width: 800px;
+  
+
 }
 
-header pre{
-
-  margin-bottom: 0;
+#contain2{
+  width: 800px;
 }
 
-header .text{
-  max-width: 800px;
-  margin: 0 auto;
-  color: rgb(255, 255, 255);
+.contain1 p{
   font-size: 20px;
-
+  font-style: bold;
 }
-
-
-
 
 
 .container1{
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 20px;
   
 }
 

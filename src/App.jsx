@@ -2,10 +2,11 @@ import { useState } from 'react'
 import Main from './components/main'
 import Header from './components/header'
 import NavBar from './components/navBar';
+import TargetCursor from './components/cursor';
 import './App.css'
 import { useEffect, useRef } from "react";
 
- function ScanlineOverlay({ speed = 60, intensity = 0.35, spacing = 4 }) {
+ function ScanlineOverlay({ speed , intensity , spacing }) {
   const canvasRef = useRef(null);
   const posY = useRef(0);
   const last = useRef(null);
@@ -71,8 +72,13 @@ function App() {
  
   return(
     <>
-     <ScanlineOverlay speed={10} intensity={0.35} spacing={5} />
-     
+
+     <ScanlineOverlay speed={10} intensity={0.4} spacing={6} />
+      <TargetCursor 
+        spinDuration={2}
+        hideDefaultCursor
+        parallaxOn
+        hoverDuration={1.5}/>
      <NavBar />
      <Header />
      <Main />

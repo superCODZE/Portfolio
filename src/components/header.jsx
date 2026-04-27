@@ -1,6 +1,21 @@
 import { useEffect, useState } from "react";
 import figlet from "figlet";
+import * as THREE from 'three';
 import standard from "figlet/importable-fonts/ANSI Shadow.js";
+
+
+
+function Cube(){
+
+}
+
+
+
+
+
+
+
+
 
 figlet.parseFont("ANSI Shadow", standard);
 
@@ -14,8 +29,8 @@ function AsciiTitle({ text }) {
   }, [text]);
 
   return (
-    <pre style={{
-     
+    <pre  style={{
+      marginTop: "50px",
       fontFamily: "monospace",
       fontSize: "clamp(5px, 1vw, 13px)",
       lineHeight: 1.2,
@@ -38,16 +53,16 @@ function Header() {
   return (
     <>
      <header>
-      <h1>HI, I am</h1>
-      <AsciiTitle text={"MAZOUZ ABDERRAHMANE"} />
-      <div className="text">
-         <p>Computer Science specialist with a sharp focus on web development. I build fast, scalable, and modern web applications from pixel-perfect frontends to solid backends. Clean code is not a habit, it's a standard.</p>
-      </div>
-      
-      
+        <div className="contain1">
+         <h1>HI, I am</h1>
+          <AsciiTitle  text={"MAZOUZ \nABDERRAHMANE"} />
+         
+           <p>computer science student passionate about web and software development. I have gained solid programming skills and a good understanding of modern web technologies. I am also interested in computer networks and how they operate, which gives me a broader perspective on the field of computer science. I am motivated, curious, and always looking to improve my skills and learn new technologies.</p>
+         
+        </div>
 
-      
-      
+        
+        
      </header>
       
     </>
