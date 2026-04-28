@@ -61,7 +61,7 @@ function Header() {
          
         </div>
 
-        
+        <canvas></canvas>
         
      </header>
       
