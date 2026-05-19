@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Main from './components/main'
+import Main from './components/mainWeb'
 import Header from './components/header'
 import NavBar from './components/navBar';
 import TargetCursor from './components/cursor';
@@ -73,9 +73,9 @@ function App() {
   return(
     <>
 
-     <ScanlineOverlay speed={10} intensity={0.4} spacing={6} />
+     <ScanlineOverlay speed={10} intensity={0.3} spacing={7} />
       <TargetCursor 
-        spinDuration={2}
+        spinDuration={7}
         hideDefaultCursor
         parallaxOn
         hoverDuration={1.5}/>

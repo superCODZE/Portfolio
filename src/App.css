@@ -44,7 +44,7 @@ header{
   font-family: 'orbitron', sans-serif;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
   
   
   
@@ -53,14 +53,26 @@ header{
 
 .contain1{
   
-  width: 800px;
+  width: 750px;
   
-
+}
+.contain2 img{
+  height: 400px;
+  width: 600px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 150px rgb(29, 1, 55);
+ 
 }
 
-#contain2{
-  width: 800px;
+
+.contain2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
+
+
 
 .contain1 p{
   font-size: 20px;

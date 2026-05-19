@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import figlet from "figlet";
-import * as THREE from 'three';
 import standard from "figlet/importable-fonts/ANSI Shadow.js";
 
-
-
-function Cube(){
-
-}
 
 
 
@@ -60,9 +54,12 @@ function Header() {
            <p>computer science student passionate about web and software development. I have gained solid programming skills and a good understanding of modern web technologies. I am also interested in computer networks and how they operate, which gives me a broader perspective on the field of computer science. I am motivated, curious, and always looking to improve my skills and learn new technologies.</p>
          
         </div>
-
-        <canvas></canvas>
-        
+       
+          <div className="contain2">
+           <img src="/image.png" alt="logo" />
+          </div>
+       
+       
      </header>
       
     </>
