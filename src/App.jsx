@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Main from './components/mainWeb'
 import Header from './components/header'
 import NavBar from './components/navBar';
 import TargetCursor from './components/cursor';
@@ -81,7 +80,7 @@ function App() {
         hoverDuration={1.5}/>
      <NavBar />
      <Header />
-     <Main />
+     
     
   
     </>

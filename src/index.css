@@ -1,4 +1,9 @@
 
+html{
+
+  zoom: 1;
+
+}
 
 body {
   margin: 0;
@@ -18,7 +23,6 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
 
 
 
