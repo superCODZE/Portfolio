@@ -43,9 +43,6 @@ function Header() {
     <>
      <header>
 
-     
-       
-
           <AnimatedContent distance={40} direction="vertical" reverse={false} duration={0.8} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
                 <div className="header-content">
                    <h1>HI, I am</h1>
@@ -59,13 +56,6 @@ function Header() {
          <AnimatedContent distance={40} direction="vertical" reverse={false} duration={0.8} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
            <img src="/image.png" alt="logo" />
          </AnimatedContent>
-       
-         
-       
-      
-         
-       
-       
      </header>
       
     </>
