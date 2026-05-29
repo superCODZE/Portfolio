@@ -9,13 +9,13 @@ function NavBar() {
     return(
         <>
             <nav>
-                  <FadeContent blur={true} duration={550} easing="ease-out" initialOpacity={0}>
+                  <FadeContent blur={true} duration={750} easing="ease-out" initialOpacity={0}>
                     <h3 className="cursor-target">.My_Portfolio</h3>
                   </FadeContent>
                   
               
 
-                 <FadeContent blur={true} duration={550} easing="ease-out" initialOpacity={0}>
+                 <FadeContent blur={true} duration={750} easing="ease-out" initialOpacity={0}>
 
                    <div className="container1">
                      <a className="cursor-target" href="">About_me</a>

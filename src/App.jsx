@@ -4,6 +4,7 @@ import NavBar from './components/navBar';
 import TargetCursor from './components/cursor';
 import './App.css'
 import { useEffect, useRef } from "react";
+import ShapeGrid from './components/gridbackground';
 
  function ScanlineOverlay({ speed , intensity , spacing }) {
   const canvasRef = useRef(null);
@@ -72,17 +73,26 @@ function App() {
   return(
     <>
 
-     <ScanlineOverlay speed={10} intensity={0.3} spacing={7} />
-      <TargetCursor 
-        spinDuration={7}
-        hideDefaultCursor
-        parallaxOn
-        hoverDuration={1.5}/>
-     <NavBar />
-     <Header />
+
+        <div style={{ position: 'relative', minHeight: '100vh' }}>
+          <div style={{
+               position: 'fixed',
+               inset: 0,          // top:0 left:0 right:0 bottom:0
+               zIndex: 0,
+            }}>
+             <ShapeGrid speed={0.2} squareSize={60} direction="diagonal" borderColor="#2F293A"  shape="square" hoverTrailAmount={0}/>
+         </div>
+
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <ScanlineOverlay speed={10} intensity={0.3} spacing={7} />
+          <TargetCursor spinDuration={7} hideDefaultCursor parallaxOn hoverDuration={1.5}/>
+          <NavBar />
+          <Header />
+       </div>
      
-    
-  
+
+
+      </div>
     </>
   ) 
  
