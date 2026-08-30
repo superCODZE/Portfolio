@@ -1,5 +1,4 @@
 
-import AnimatedContent from '../scale.jsx';
 import FadeContent from '../fade.jsx';
 
 

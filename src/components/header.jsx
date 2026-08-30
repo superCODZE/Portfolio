@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/ANSI Shadow.js";
 import AnimatedContent from '../scale.jsx';
@@ -49,7 +50,13 @@ function Header() {
                    <h1>HI, I am</h1>
                    <AsciiTitle  text={"MAZOUZ \nABDERRAHMANE"} />
                    <p>computer science student passionate about web and software development. I have gained solid programming skills and a good understanding of modern web technologies. I am also interested in computer networks and how they operate, which gives me a broader perspective on the field of computer science. I am motivated, curious, and always looking to improve my skills and learn new technologies.</p>
+                   <div className="header-buttons">
+                     <button className="cursor-target">Download CV</button>
+                     <button className="cursor-target">Work together ?</button>
+                   </div>
+                  
                 </div>
+                
                </AnimatedContent>
           
          
@@ -58,7 +65,11 @@ function Header() {
                <MatrixCube/>
              </AnimatedContent>
           </div>
-          
+
+          <div className="header-social">
+             <h5>Follow me :</h5>
+          </div>
+
           <div className="header-lower">
             <div className="scroll-infinite">
               <h4>coding</h4>
