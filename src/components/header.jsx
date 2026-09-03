@@ -68,12 +68,42 @@ function Header() {
                <MatrixCube/>
              </AnimatedContent>
           </div>
+      
+
+
 
           <div className="header-social">
-             <h5>Follow me :</h5>
+            <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
+              
+              <div className="header-social-icons">
+                <h5>Follow me :</h5>
+                <div className="header-social-links">
+                  <a href="mailto:mazathomazigh@gmail.com" >
+                    <img className="cursor-target" src="gmail.svg" alt="gmail" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/mazouz-abderrahmane-062807370">
+                    <img className="cursor-target" src="linkedin.svg" alt="linkedin" />
+                  </a>
+                  <a href="https://github.com/superCODZE" >
+                    <img className="cursor-target" src="github.svg" alt="github" />
+                  </a>
+                  
+
+                </div>
+
+              </div>
+              
+            </AnimatedContent>
+
+            
           </div>
 
+
+
+
+         <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
           <div className="header-lower">
+            
             <div className="scroll-infinite">
               <h4>coding</h4>
               <h4>Networking</h4>
@@ -107,7 +137,7 @@ function Header() {
               <h4>Projects</h4>
             </div>
           </div>
-
+        </AnimatedContent>
 
        
 

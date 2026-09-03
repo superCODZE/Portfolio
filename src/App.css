@@ -61,6 +61,46 @@ nav a:hover{
 }
 
 
+a {
+  
+  cursor: none;
+
+}
+
+.header-social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+
+
+.header-social-links a:hover{
+  filter: drop-shadow(0 0 10px rgb(0, 255, 238));
+ 
+
+}
+
+.header-social-links img{
+  width: 30px;
+  height: 30px;
+}
+
+.header-social-links{
+  display: flex;
+  flex-direction: row;
+  height: 5px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: none;
+  
+}
+
 
 .header-upper button{
   width: 180px;
