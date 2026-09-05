@@ -5,6 +5,7 @@ import TargetCursor from './components/cursor';
 import './App.css'
 import { useEffect, useRef } from "react";
 import ShapeGrid from './components/gridbackground';
+import SkillsSection from './components/skillsSection';
 
  function ScanlineOverlay({ speed , intensity , spacing }) {
   const canvasRef = useRef(null);
@@ -77,7 +78,7 @@ function App() {
         <div style={{ position: 'relative', minHeight: '100vh' }}>
           <div style={{
                position: 'fixed',
-               inset: 0,          // top:0 left:0 right:0 bottom:0
+               inset: 0,         
                zIndex: 0,
             }}>
              <ShapeGrid speed={0.2} squareSize={60} direction="diagonal" borderColor="#2F293A"  shape="square" hoverTrailAmount={0}/>
@@ -88,6 +89,7 @@ function App() {
           <TargetCursor spinDuration={7} hideDefaultCursor parallaxOn hoverDuration={1.5}/>
           <NavBar />
           <Header />
+          <SkillsSection />
        </div>
      
 
