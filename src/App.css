@@ -214,12 +214,16 @@ a {
 }
 
 .skills-cards{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
   gap: 20px;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  width: max-content;
+  max-width: none;
+  overflow: visible;
+  
 }
 
 .card{
@@ -233,6 +237,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .card-title{
@@ -257,6 +262,7 @@ a {
   font-family: 'orbitron', sans-serif;
   font-size: 20px;
   color: rgb(255, 255, 255);
+  width: 80%;
  
 }
 
