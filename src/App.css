@@ -213,7 +213,7 @@ a {
   height: 70px;
 }
 
-.skills-cards{
+.skills-info{
   display: grid;
   grid-template-columns: repeat(4, 320px);
   gap: 20px;
@@ -225,6 +225,30 @@ a {
   overflow: visible;
   
 }
+
+.skills-part{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+
+.languages-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+
+
 
 .card{
   width: 320px;
