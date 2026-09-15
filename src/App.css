@@ -215,8 +215,8 @@ a {
 
 .skills-info{
   display: grid;
-  grid-template-columns: repeat(4, 320px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 320px);
+  gap: 40px;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
@@ -226,6 +226,10 @@ a {
   
 }
 
+.skills-info > :last-child{
+  grid-column: 2;
+}
+
 .skills-part{
   display: flex;
   flex-direction: column;
@@ -233,18 +237,46 @@ a {
   justify-content: center;
   gap: 10px;
   width: 100%;
+  height: auto;
+  background-color: #01071c;
+  border: solid rgb(0, 255, 238);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+.skills-part h2{
+  font-size: 20px;
+ 
+}
 
-.languages-icons{
+.skills-icons{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   width: 100%;
 }
+
+.skills-icons img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(1.2) contrast(1.1);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.skills-icons img[src*="/oracle/"]{
+  transform: scale(1.6);
+}
+
+.skills-icons img[src*="/github/"]{
+  filter: brightness(0) invert(1);
+}
+
 
 
 
