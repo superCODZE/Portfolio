@@ -7,6 +7,9 @@ import { useEffect, useRef } from "react";
 import ShapeGrid from './components/gridbackground';
 import SkillsSection from './components/skillsSection';
 
+
+
+
  function ScanlineOverlay({ speed , intensity , spacing }) {
   const canvasRef = useRef(null);
   const posY = useRef(0);
@@ -73,7 +76,6 @@ function App() {
  
   return(
     <>
-
 
         <div style={{ position: 'relative', minHeight: '100vh' }}>
           <div style={{

@@ -1,6 +1,7 @@
 
 
-function Card({ title, description, imageUrl }) {
+
+function projectCard({ title, description, imageUrl }) {
   return (
     <>
     <div className="card-hover">
@@ -19,4 +20,4 @@ function Card({ title, description, imageUrl }) {
   );
 }
 
-export default Card;
+export default projectCard;
