@@ -1,7 +1,15 @@
 
 import FadeContent from '../fade.jsx';
 
-
+const scrollToId = (id) => (e) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    const nav = document.querySelector('nav');
+    const offset = nav ? nav.offsetHeight : 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+};
 
 
 function NavBar() {
@@ -17,10 +25,10 @@ function NavBar() {
                  <FadeContent blur={true} duration={750} easing="ease-out" initialOpacity={0}>
 
                    <div className="container1">
-                     <a className="cursor-target" href="">About_me</a>
-                     <a className="cursor-target" href=""> Skills</a>
-                     <a className="cursor-target" href=""> Projects</a>
-                     <a className="cursor-target" href="">Contact </a> 
+                     <button type="button" className="cursor-target" onClick={scrollToId('about')}>About_me</button>
+                     <button type="button" className="cursor-target" onClick={scrollToId('skills')}>Skills</button>
+                     <button type="button" className="cursor-target" onClick={scrollToId('projects')}>Projects</button>
+                     <button type="button" className="cursor-target" onClick={scrollToId('contact')}>Contact</button>
                   </div>
 
                  </FadeContent>

@@ -3,7 +3,7 @@ import ProjectCard from './projectCard';
 
 function ProjectSection() {
   return (
-    <section className="projects-info">
+    <section id="projects" className="projects-info">
       <div className="projects-header">
        <h1>My Projects</h1>
        <p>these are my projects</p>

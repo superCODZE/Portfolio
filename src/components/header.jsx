@@ -35,7 +35,7 @@ function AsciiTitle({ text }) {
 function Header() {
   return (
     <>
-     <header>
+     <header id="about">
           <div className="header-upper">
                <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
                 <div className="header-content">
