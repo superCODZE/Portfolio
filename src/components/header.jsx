@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import figlet from "figlet";
 import standard from "figlet/importable-fonts/ANSI Shadow.js";
 import AnimatedContent from '../scale.jsx';
@@ -11,13 +9,7 @@ import MatrixCube from "./cube.jsx";
 figlet.parseFont("ANSI Shadow", standard);
 
 function AsciiTitle({ text }) {
-  const [ascii, setAscii] = useState("");
-
-  useEffect(() => {
-    figlet.text(text, { font: "ANSI Shadow" }, (err, result) => {
-      if (!err) setAscii(result);
-    });
-  }, [text]);
+  const ascii = figlet.textSync(text, { font: "ANSI Shadow" });
 
   return (
     <pre  style={{
@@ -101,7 +93,7 @@ function Header() {
 
 
 
-         <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
+          <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0} startImmediately>
           <div className="header-lower">
             
             <div className="scroll-infinite">
@@ -137,7 +129,7 @@ function Header() {
               <h4>Projects</h4>
             </div>
           </div>
-        </AnimatedContent>
+          </AnimatedContent>
 
        
 

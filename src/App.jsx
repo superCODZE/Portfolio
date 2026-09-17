@@ -6,6 +6,7 @@ import './App.css'
 import { useEffect, useRef } from "react";
 import ShapeGrid from './components/gridbackground';
 import SkillsSection from './components/skillsSection';
+import ProjectSection from './components/projectSection';
 
 
 
@@ -92,7 +93,8 @@ function App() {
           <NavBar />
           <Header />
           <SkillsSection />
-       </div>
+          <ProjectSection />
+        </div>
      
 
 

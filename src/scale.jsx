@@ -17,6 +17,7 @@ const AnimatedContent = forwardRef(({
   scale = 1,
   threshold = 0.1,
   delay = 0,
+  startImmediately = false,
   disappearAfter = 0,
   disappearDuration = 0.5,
   disappearEase = 'power3.in',
@@ -77,16 +78,20 @@ const AnimatedContent = forwardRef(({
       ease
     });
 
-    const st = ScrollTrigger.create({
-      trigger: el,
-      scroller: scrollerTarget,
-      start: `top ${startPct}%`,
-      once: true,
-      onEnter: () => tl.play()
-    });
+    const st = startImmediately
+      ? null
+      : ScrollTrigger.create({
+          trigger: el,
+          scroller: scrollerTarget,
+          start: `top ${startPct}%`,
+          once: true,
+          onEnter: () => tl.play()
+        });
+
+    if (startImmediately) tl.play();
 
     return () => {
-      st.kill();
+      st?.kill();
       tl.kill();
     };
   }, [
@@ -101,6 +106,7 @@ const AnimatedContent = forwardRef(({
     scale,
     threshold,
     delay,
+    startImmediately,
     disappearAfter,
     disappearDuration,
     disappearEase,

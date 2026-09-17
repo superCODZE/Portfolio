@@ -1,13 +1,13 @@
 
 
 
-function projectCard({ title, description, imageUrl }) {
+function ProjectCard({ title, description, url }) {
   return (
     <>
     <div className="card-hover">
     <div className="card">
       <div className="card-title">
-         <img src={imageUrl} alt={title} className="card-image" />
+         <img src={url} alt={title} className="card-image" />
          <h3>{title}</h3>
       </div>
     
@@ -20,4 +20,4 @@ function projectCard({ title, description, imageUrl }) {
   );
 }
 
-export default projectCard;
+export default ProjectCard;
