@@ -2,7 +2,7 @@ import figlet from "figlet";
 import standard from "figlet/importable-fonts/ANSI Shadow.js";
 import AnimatedContent from '../scale.jsx';
 import MatrixCube from "./cube.jsx";
-
+import { scrollToId } from '../scroll.js';
 
 
 
@@ -47,7 +47,7 @@ function Header() {
                           <button className="cursor-target" >Download CV</button>
                       </a>
                     
-                     <button className="cursor-target">Work together ?</button>
+                     <button className="cursor-target" onClick={scrollToId('contact')}>Work together ?</button>
                    </div>
                   
                 </div>
@@ -69,7 +69,12 @@ function Header() {
               
               <div className="header-social-icons">
                 <h5>Follow me :</h5>
+
                 <div className="header-social-links">
+                  <a></a>
+                  <a href="https://www.reddit.com/user/Pedroo-mas/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank" rel="noreferrer">
+                    <img className="cursor-target" src="reddit.svg" alt="reddit" />
+                  </a>
                   <a href="mailto:mazathomazigh@gmail.com" >
                     <img className="cursor-target" src="gmail.svg" alt="gmail" />
                   </a>
@@ -78,6 +83,9 @@ function Header() {
                   </a>
                   <a href="https://github.com/superCODZE" >
                     <img className="cursor-target" src="github.svg" alt="github" />
+                  </a>
+                  <a href="https://discord.com/users/878014620697243701" target="_blank" rel="noreferrer">
+                    <img className="cursor-target" src="discord.svg" alt="discord" />
                   </a>
                   
 
