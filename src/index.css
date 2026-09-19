@@ -2,6 +2,9 @@
 html{
 
   zoom: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #00ffee #01071c;
 
@@ -29,6 +32,9 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: linear-gradient(45deg,#01071c, #0f0119);
   background-repeat: no-repeat;
   zoom: 100%;
@@ -40,6 +46,9 @@ body {
 #root {
   
   margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;

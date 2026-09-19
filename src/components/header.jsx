@@ -5,30 +5,18 @@ import MatrixCube from "./cube.jsx";
 import { scrollToId } from '../scroll.js';
 
 
-
 figlet.parseFont("ANSI Shadow", standard);
 
 function AsciiTitle({ text }) {
   const ascii = figlet.textSync(text, { font: "ANSI Shadow" });
 
   return (
-    <pre  style={{
-      marginTop: "35px",
-      fontFamily: "monospace",
-      fontSize: "clamp(5px, 1vw, 10px)",
-      lineHeight: 1.2,
-      whiteSpace: "pre",
-      overflow: "hidden",
-      background: "linear-gradient(0deg, #00bba9, #00e18e)",
-      marginbottom: 0,
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
-      
-      filter: 'drop-shadow(0px 0px 3px rgb(0, 255, 136)) drop-shadow(0px 0px 20px rgba(86, 0, 166, 0.7))',
-    }}>
-      {ascii}
-    </pre>
+    <>
+      <pre className="ascii-title">
+        {ascii}
+      </pre>
+      <h2 className="header-name">MAZOUZ ABDERRAHMANE</h2>
+    </>
   );
 }
 
@@ -47,7 +35,7 @@ function Header() {
                           <button className="cursor-target" >Download CV</button>
                       </a>
                     
-                     <button className="cursor-target" onClick={scrollToId('contact')}>Work together ?</button>
+                     <button className="cursor-target" onClick={scrollToId('contact')}>collaborate</button>
                    </div>
                   
                 </div>
@@ -57,7 +45,9 @@ function Header() {
          
       
              <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0}>
-               <MatrixCube/>
+               <div className="header-cube">
+                 <MatrixCube />
+               </div>
              </AnimatedContent>
           </div>
       
