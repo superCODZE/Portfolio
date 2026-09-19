@@ -93,8 +93,8 @@ function Header() {
 
           <AnimatedContent distance={40} direction="vertical" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={0} startImmediately>
           <div className="header-lower">
-            
-            <div className="scroll-infinite">
+            <div className="scroll-track">
+              <div className="scroll-infinite">
               <h4>coding</h4>
               <h4>Networking</h4>
               <h4>developing</h4>
@@ -103,8 +103,8 @@ function Header() {
               <h4>backend</h4>
               <h4>collaboration</h4>
               <h4>Projects</h4>
-            </div>
-            <div aria-hidden className="scroll-infinite">
+              </div>
+              <div aria-hidden className="scroll-infinite">
               <h4>coding</h4>
               <h4>Networking</h4>
               <h4>developing</h4>
@@ -113,10 +113,9 @@ function Header() {
               <h4>backend</h4>
               <h4>collaboration</h4>
               <h4>Projects</h4>
-            </div>
+              </div>
 
-
-            <div aria-hidden className="scroll-infinite">
+              <div aria-hidden className="scroll-infinite">
               <h4>coding</h4>
               <h4>Networking</h4>
               <h4>developing</h4>
@@ -125,6 +124,7 @@ function Header() {
               <h4>backend</h4>
               <h4>collaboration</h4>
               <h4>Projects</h4>
+              </div>
             </div>
           </div>
           </AnimatedContent>

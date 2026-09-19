@@ -325,6 +325,8 @@ a {
   font-family: 'orbitron', sans-serif;
   font-size: 20px;
   gap: 50px;
+  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -370,27 +372,37 @@ a {
   display: none;
 }
 
+.header-lower::-webkit-scrollbar {
+  display: none;
+}
+
 .header-lower{
   margin-top: 70px;
+  width: 100%;
   max-width: 100vw;
   display: flex;
   align-items: center;
   font-family: 'orbitron', sans-serif;
   font-size: 15px;
   background-color: #01071c;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .header-lower .scroll-infinite{
   display: flex;
   flex-wrap: nowrap;
   width: max-content;
-  animation: scrollAnimation 20s linear infinite;  
   color: rgb(0, 255, 238);
   gap: 109px;
   flex: 0 0 max-content;
-  min-width: 100%;
   padding-right: 109px;
+}
+
+.header-lower .scroll-track{
+  display: flex;
+  flex: 0 0 max-content;
+  width: max-content;
+  animation: scrollTrackAnimation 20s linear infinite;
 }
 
 .header-lower .scroll-infinite h4{
@@ -664,6 +676,11 @@ a {
   
 }
 
+@keyframes scrollTrackAnimation {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333333%); }
+}
+
 @media (max-width: 700px){
   *,
   *::before,
@@ -702,7 +719,8 @@ a {
     gap: 20px;
     width: calc(100% - 24px);
     max-width: 100%;
-    overflow-x: hidden;
+    margin-inline: auto;
+    overflow-x: clip;
     text-align: center;
   }
 
@@ -722,6 +740,7 @@ a {
 
   .header-upper .header-content{
     width: 100%;
+    margin-inline: auto;
     align-items: stretch;
     text-align: center;
   }
@@ -793,18 +812,19 @@ a {
   }
 
   .header-lower{
+    display: block;
+    height: 58px;
     margin-top: 32px;
     width: 100%;
-    min-width: 0;
     max-width: 100%;
-    overflow-x: hidden;
+    background-color: #01071c;
+    border-block: 1px solid #001e22;
+    box-shadow: none;
+    overflow: hidden;
   }
 
-  .header-lower .scroll-infinite{
-    width: max-content;
-    min-width: 100%;
-    gap: 48px;
-    padding-right: 48px;
+  .header-lower .scroll-track{
+    display: none;
   }
 
   .header-lower .scroll-infinite h4{
