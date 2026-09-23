@@ -1,4 +1,8 @@
 
+
+
+import ContactUs from "./contactForm";
+
 function Footer() {
     return (
         <footer id="contact" className="footer">
@@ -30,17 +34,8 @@ function Footer() {
                     </a>
 
                 </div>
-                <div className="contact-form">
-                    <h3>Contact Form</h3>
-                    <form action="https://formspree.io/f/mnqvydqv" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required />
-                        <input type="email" name="email" placeholder="Your Email" required />
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button className="cursor-target" type="submit">Send</button>
-                    </form>
-
-                </div>
-
+                
+              <ContactUs />
             </div>
             
         </footer>

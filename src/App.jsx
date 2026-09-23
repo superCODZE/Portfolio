@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 import ShapeGrid from './components/gridbackground';
 import SkillsSection from './components/skillsSection';
 import ProjectSection from './components/projectSection';
-import Footer from './components/footer ';
+import Footer from './components/footer';
 
 
 
