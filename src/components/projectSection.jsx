@@ -23,18 +23,21 @@ function ProjectSection() {
           title="Library manager"
           description="A web application for managing books, users, and borrow records with a clean interface."
           url="Libraries.jpeg"
+          repo_url="https://github.com/superCODZE/Library_manager"
         
         />
         <ProjectCard
           title="Parts properties detector"
           description="A smart tool that helps identify and classify vehicle components from incoming data."
           url="auto parts.jpeg"
+          repo_url="https://github.com/superCODZE/Part-properties-detector"
         
         />
         <ProjectCard
           title="HTTP server"
           description="A simple HTTP server implemented in golang."
           url="http.jpeg"
+          repo_url="https://github.com/superCODZE/Go_server"
         />
       </div>
     </section>

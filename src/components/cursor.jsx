@@ -64,6 +64,18 @@ const TargetCursor = ({
     let currentLeaveHandler = null;
     let resumeTimeout = null;
 
+    const updateTargetCornerPositions = target => {
+      const rect = target.getBoundingClientRect();
+      const { borderWidth, cornerSize } = constants;
+
+      targetCornerPositionsRef.current = [
+        { x: rect.left - borderWidth, y: rect.top - borderWidth },
+        { x: rect.right + borderWidth - cornerSize, y: rect.top - borderWidth },
+        { x: rect.right + borderWidth - cornerSize, y: rect.bottom + borderWidth - cornerSize },
+        { x: rect.left - borderWidth, y: rect.bottom + borderWidth - cornerSize }
+      ];
+    };
+
     const cleanupTarget = target => {
       if (currentLeaveHandler) {
         target.removeEventListener('mouseleave', currentLeaveHandler);
@@ -96,6 +108,10 @@ const TargetCursor = ({
 
       const strength = activeStrengthRef.current;
       if (strength === 0) return;
+
+      if (activeTarget) {
+        updateTargetCornerPositions(activeTarget);
+      }
 
       const cursorX = gsap.getProperty(cursorRef.current, 'x');
       const cursorY = gsap.getProperty(cursorRef.current, 'y');
@@ -188,17 +204,10 @@ const TargetCursor = ({
       spinTl.current?.pause();
       gsap.set(cursorRef.current, { rotation: 0 });
 
-      const rect = target.getBoundingClientRect();
-      const { borderWidth, cornerSize } = constants;
       const cursorX = gsap.getProperty(cursorRef.current, 'x');
       const cursorY = gsap.getProperty(cursorRef.current, 'y');
 
-      targetCornerPositionsRef.current = [
-        { x: rect.left - borderWidth, y: rect.top - borderWidth },
-        { x: rect.right + borderWidth - cornerSize, y: rect.top - borderWidth },
-        { x: rect.right + borderWidth - cornerSize, y: rect.bottom + borderWidth - cornerSize },
-        { x: rect.left - borderWidth, y: rect.bottom + borderWidth - cornerSize }
-      ];
+      updateTargetCornerPositions(target);
 
       isActiveRef.current = true;
       gsap.ticker.add(tickerFnRef.current);
