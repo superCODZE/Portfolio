@@ -1,9 +1,16 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 function ContactUs() {
   const form = useRef(null);
   const [status, setStatus] = useState('');
+
+  useEffect(() => {
+    if (status !== 'success') return undefined;
+
+    const timer = setTimeout(() => setStatus(''), 3000);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   const sendEmail = (e) => {
     e.preventDefault();
