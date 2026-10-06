@@ -34,8 +34,8 @@ function ProjectSection() {
         
         />
         <ProjectCard
-          title="HTTP server"
-          description="A simple HTTP server implemented in golang."
+          title="Mini server"
+          description="A simple server that handles HTTP requests and responses."
           url="http.jpeg"
           repo_url="https://github.com/superCODZE/Go_server"
         />
