@@ -35,7 +35,7 @@ function Header() {
                           <button className="cursor-target" >Download CV</button>
                       </a>
                     
-                     <button className="cursor-target" onClick={scrollToId('contact')}>work together</button>
+                     <button className="cursor-target" onClick={scrollToId('contact')}>work together ?</button>
                    </div>
                   
                 </div>
